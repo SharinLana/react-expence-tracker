@@ -1,23 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import InputMain from "./components/IncomingData/InputMain";
+import ExpensesMain from "./components/OutcomingData/Expenses/ExpensesMain";
+import { data } from './data';
+
 
 function App() {
+  const [userInput, setUserInput] = useState(data);
+
+  const getUserInput = (object) => {
+    setUserInput(prevState => {
+      return [object, ...userInput]
+    });
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <InputMain data={data} getUserInput={getUserInput}/>
+      <ExpensesMain userInput={userInput}/>
     </div>
   );
 }
