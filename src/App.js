@@ -4,6 +4,7 @@ import ExpensesMain from "./components/OutcomingData/Expenses/ExpensesMain";
 import { data } from './data';
 
 
+
 function App() {
   const [userInput, setUserInput] = useState(data);
 
