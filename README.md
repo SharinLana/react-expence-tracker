@@ -4,6 +4,12 @@
 The user enters information about purchases, and the application automatically processes the data and displays a graph of the intensity of the user's spending by months and years.
 `NOTE: This application does not store user data (the entered information will be lost after the app is restarted).`
 
+## The goals of creating this application:
+The main goals for me as a web developer were to improve my skills in working with:
+- React components;
+- React props;
+- useState() hook
+
 ## To start the app on your machine:
 
 1. Clone the project to your machine by running:
